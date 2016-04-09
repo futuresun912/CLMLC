@@ -1,6 +1,6 @@
 % This is an example program for the paper: 
 % 
-% L. Sun et al. A scalable clustering-based local multi-label classification method. An ECAI-16 Submission. 
+% L. Sun et al. A scalable clustering-based local multi-label classification method. An ECAI-16 submission. 
 %
 % The program shows how the CLMLC program (The main function is "CLMLC.m") can be used.
 %
