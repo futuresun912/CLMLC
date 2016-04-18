@@ -62,7 +62,7 @@ for k = 1:n
     else
         Yt((C==k),:) = round((CC(X,meta_target,Xt)+CC(X,meta_target,Xt))./2);
     end
-    X = [X,meta_target'];
+    X  = [X,meta_target'];
     Xt = [Xt,Yt((C==k),:)'];
 end
 

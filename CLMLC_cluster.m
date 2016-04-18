@@ -12,7 +12,7 @@ function [X,Xt,R,C] = CLMLC_cluster( X,Y,Xt,d,K )
 %           Y       An L x N label matrix, each column is a label set
 %           Xt      An Nt x D test data matrix, each row is a test sample
 %           d       The size of feature subspace
-%           k       The number of data clusters
+%           K       The number of data clusters
 % 
 %       Output
 %           X       An N x d data matrix, each row denotes a sample
@@ -28,7 +28,6 @@ Y  = bsxfun(@minus,Y,mean(Y));
 
 %% The two-stage approach for OPLS
 % Stage 1: solve the regularized least squares problem
-% [W1,S1,V1] = rsvd(X,600);
 [W1,S1,V1] = svd(X','econ');
 r1 = rank(S1);
 W1 = W1(:,1:r1); S1 = S1(1:r1,1:r1); V1 = V1(:,1:r1);

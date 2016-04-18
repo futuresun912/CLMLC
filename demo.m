@@ -24,7 +24,6 @@ addpath(genpath('func'));
 %% Load a multi-label method and dataset
 load('corel5k.mat');
 
-
 %% Set parameters
 opts.d  =  30;
 opts.k  =  100;
@@ -37,8 +36,7 @@ Results = zeros(5,num_fold);
 for i = 1:num_fold
     disp(['Fold ',num2str(i)]);
     test = (indices == i); train = ~test;  
-    tic; 
-    Pre_Labels = CLMLC(data(train,:),target(:,train),data(test,:),opts);
+    tic; Pre_Labels = CLMLC(data(train,:),target(:,train),data(test,:),opts);
     Results(1,i) = toc;
     [ExactM,HamS,MacroF1,MicroF1] = Evaluation(Pre_Labels,target(:,test));
     Results(2:end,i) = [ExactM,HamS,MacroF1,MicroF1];
