@@ -1,5 +1,5 @@
 function Pre_Labels = CC(train_data,train_target,test_data)
-%CC Classifier Chains with ridge regression
+%CC Classifier Chains [1] with ridge regression
 %
 %    Syntax
 %

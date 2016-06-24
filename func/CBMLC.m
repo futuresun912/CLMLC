@@ -1,5 +1,5 @@
 function Pre_Labels = CBMLC(train_data,train_target,test_data,opts)
-%CBMLC Clustering-Based Multi-Label Classification
+%CBMLC Clustering-Based Multi-Label Classification [1]
 %
 %    Syntax
 %
